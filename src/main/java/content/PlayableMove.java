@@ -21,7 +21,6 @@ public class PlayableMove {
         } else if (moveName.equals(MoveType.scissor.name())) {
             result = MoveType.scissor;
         }
-
         return result;
     }
 
