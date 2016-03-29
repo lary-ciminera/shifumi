@@ -1,0 +1,16 @@
+<resources>
+	<string name="app_name">Shifumi</string>
+
+	<string name="hello_world">Hello world!</string>
+	<string name="action_settings">Settings</string>
+	<string name="victory_string">Victory :</string>
+	<string name="match_string">Match :</string>
+	<string name="rock">rock</string>
+	<string name="paper">paper</string>
+	<string name="scissor">scissor</string>
+	<string name="ai_dialog_message">Pick a computer difficulty</string>
+	<string name="ai_dialog_title">Difficulty :</string>
+	<string name="ai_easy">easy</string>
+	<string name="ai_normal">Normal</string>
+	<string name="start_txt">Tap anywhere to start !</string>
+</resources>

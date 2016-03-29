@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				xmlns:tools="http://schemas.android.com/tools"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				tools:context=".StartActivity">
+
+	<LinearLayout
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:orientation="vertical">
+<RelativeLayout
+	android:layout_width="fill_parent"
+	android:layout_margin="16dp"
+	android:layout_height="wrap_content"
+	android:background="@drawable/border_round_white"
+	android:id="@+id/player_vs_computer"
+	android:layout_weight="1">
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_centerInParent="true"
+		android:layout_height="wrap_content"
+		android:text="Player VS Computer"
+		android:textColor="#000000"/>
+
+
+</RelativeLayout>
+<RelativeLayout
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_margin="16dp"
+	android:id="@+id/computer_vs_computer"
+	android:background="@drawable/border_round_white"
+	android:layout_weight="1">
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_centerInParent="true"
+		android:layout_height="wrap_content"
+		android:text="Computer VS Computer"
+		android:textColor="#000000"/>
+	
+</RelativeLayout>
+
+
+</LinearLayout>
+</RelativeLayout>

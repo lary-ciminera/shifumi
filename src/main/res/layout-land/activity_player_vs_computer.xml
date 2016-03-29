@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+
+	<LinearLayout
+		android:id="@+id/player_choice_layout"
+		android:layout_width="100dp"
+		android:layout_height="fill_parent"
+		android:orientation="vertical"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentEnd="true">
+
+		<RelativeLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="@dimen/global_margin"
+			android:layout_weight="1"
+			android:background="@drawable/border_round_grey"
+			android:onClick="play_choice"
+			android:padding="5dp"
+			android:tag="@string/rock">
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:layout_centerInParent="true"
+				android:src="@drawable/rock"/>
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="@dimen/global_margin"
+			android:layout_weight="1"
+			android:background="@drawable/border_round_grey"
+			android:onClick="play_choice"
+			android:padding="5dp"
+			android:tag="@string/paper">
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:layout_centerInParent="true"
+				android:src="@drawable/paper"/>
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="@dimen/global_margin"
+			android:layout_weight="1"
+			android:background="@drawable/border_round_grey"
+			android:onClick="play_choice"
+			android:padding="5dp"
+			android:tag="@string/scissor">
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:layout_centerInParent="true"
+				android:src="@drawable/scissor"/>
+		</RelativeLayout>
+
+
+	</LinearLayout>
+
+	<ImageView
+		android:id="@+id/computer_image"
+		android:layout_width="100dp"
+		android:layout_height="wrap_content"
+
+		android:background="@drawable/border_round_grey"
+		android:src="@drawable/computer_white"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"
+		android:layout_centerVertical="true"/>
+
+	<LinearLayout
+		android:id="@+id/space"
+		android:layout_width="5dp"
+		android:layout_height="fill_parent"
+		android:layout_centerHorizontal="true"
+		android:layout_centerVertical="true"
+		android:orientation="vertical"/>
+
+	<RelativeLayout
+		android:id="@+id/other_choice"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:background="@drawable/border_round_grey"
+		android:padding="5dp"
+		android:layout_alignTop="@+id/relativeLayout"
+		android:layout_toRightOf="@+id/space"
+		android:layout_toEndOf="@+id/space"
+		android:layout_centerVertical="true">
+
+		<ImageView
+			android:id="@+id/other_choice_image"
+			android:layout_width="wrap_content"
+			android:layout_height="100dp"
+			android:layout_centerHorizontal="true"/>
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:background="@drawable/border_round_grey"
+		android:padding="5dp"
+		android:id="@+id/relativeLayout"
+		android:layout_centerVertical="true"
+		android:layout_toLeftOf="@+id/space"
+		>
+
+		<ImageView
+			android:id="@+id/computer_choice"
+			android:layout_width="wrap_content"
+			android:layout_height="100dp"
+			android:layout_centerInParent="true"
+			/>
+	</RelativeLayout>
+
+	<LinearLayout
+		android:id="@+id/computer_victory"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_centerVertical="true"
+		android:layout_toRightOf="@+id/computer_image"
+		android:layout_toEndOf="@+id/computer_image">
+
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/victory_string"
+			android:textColor="#000000"
+			android:layout_below="@+id/linearLayout2"
+			android:layout_toRightOf="@+id/computer_image"
+			android:layout_toEndOf="@+id/computer_image"
+			android:id="@+id/textView"/>
+
+		<TextView
+			android:id="@+id/computer_score"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="#000000"
+
+			/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/player_victory"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_toLeftOf="@+id/player_choice_layout"
+		android:layout_toStartOf="@+id/player_choice_layout"
+		android:layout_centerVertical="true">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/victory_string"
+			android:textColor="#000000"/>
+
+		<TextView
+			android:id="@+id/player_score"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="#000000"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/linearLayout2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/match_string"
+			android:textColor="#000000"/>
+
+		<TextView
+			android:id="@+id/match_number"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="#000000"/>
+	</LinearLayout>
+
+</RelativeLayout>

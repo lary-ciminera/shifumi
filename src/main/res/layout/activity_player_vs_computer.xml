@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+	<include  layout="@layout/computer" android:id="@+id/id" />
+
+	<LinearLayout
+		android:id="@+id/linearLayout2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentEnd="true"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/match_string"
+			android:textColor="#000000"/>
+
+		<TextView
+			android:id="@+id/match_number"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="#000000"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/player_victory"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/player_choice_layout"
+		android:layout_centerHorizontal="true"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/victory_string"
+			android:textColor="#000000"/>
+
+		<TextView
+			android:id="@+id/player_score"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="#000000"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/player_choice_layout"
+		android:layout_width="fill_parent"
+		android:layout_height="100dp"
+		android:layout_alignParentBottom="true">
+
+		<RelativeLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="@dimen/global_margin"
+			android:layout_weight="1"
+			android:background="@drawable/border_round_grey"
+			android:onClick="play_choice"
+			android:padding="5dp"
+			android:tag="@string/rock">
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:layout_centerInParent="true"
+				android:src="@drawable/rock"/>
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="@dimen/global_margin"
+			android:layout_weight="1"
+			android:background="@drawable/border_round_grey"
+			android:onClick="play_choice"
+			android:padding="5dp"
+			android:tag="@string/paper">
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:layout_centerInParent="true"
+				android:src="@drawable/paper"/>
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="@dimen/global_margin"
+			android:layout_weight="1"
+			android:background="@drawable/border_round_grey"
+			android:onClick="play_choice"
+			android:padding="5dp"
+			android:tag="@string/scissor">
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="fill_parent"
+				android:layout_centerInParent="true"
+				android:src="@drawable/scissor"/>
+		</RelativeLayout>
+
+
+	</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:onClick="launch_match"
+				android:layout_height="match_parent">
+
+	<include  layout="@layout/computer" android:id="@+id/id" />
+
+	<LinearLayout
+		android:id="@+id/linearLayout2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentEnd="true"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/match_string"
+			android:textColor="#000000"/>
+
+		<TextView
+			android:id="@+id/match_number"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="#000000"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/computer2_victory"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/computer2_image"
+		android:layout_centerHorizontal="true"
+		android:orientation="horizontal">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/victory_string"
+			android:textColor="#000000"/>
+
+		<TextView
+			android:id="@+id/computer2_score"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="#000000"/>
+	</LinearLayout>
+
+	<ImageView
+		android:id="@+id/computer2_image"
+		android:layout_width="wrap_content"
+		android:layout_height="100dp"
+
+		android:background="@drawable/border_round_grey"
+		android:src="@drawable/computer"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+		android:layout_margin="@dimen/global_margin"/>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:text="@string/start_txt"
+		android:id="@+id/start"
+		android:layout_alignBottom="@+id/linearLayout2"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"/>
+
+</RelativeLayout>
